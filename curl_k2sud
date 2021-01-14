@@ -1,0 +1,24 @@
+
+
+serveri k2ivitamine:
+# pwd
+/root/node/test1
+# node index.js
+
+
+###########
+
+curl http://localhost:3000/api/ping
+
+curl -d '{"firstName" : "Kalle","lastName" : "Kaalikas","email" : "kalle@kaalikas.ee","password" : "kalle"}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/users
+
+curl -d '{"firstName" : "Juta","lastName" : "Kaarelson","email" : "juta@kool.ee","password" : "malle99"}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/teachers
+
+curl -d '{"className" : "t66opetus","mandatory" : "ei"}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/classes
+
+curl -d '{"HwName" : "Referaat Pythagorasest","forClass" : "Matemaatika","due" : "detsember"}' -H "Content-Type: application/json" -X POST http://localhost:3000/api/homeworks
+
+curl -X PUT -H "Content-Type: application/json" -d '{"firstName":"Veljo","lastName":"Kala","email":"veljo221@gmail.com","password":"uusSalasona"}' http://localhost:3000/api/teachers/6
+
+curl -X "DELETE" http://localhost:3000/api/teachers/5
+
